@@ -1,0 +1,13 @@
+sysbench 1.0.18 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 12
+Report intermediate results every 10 second(s)
+Initializing random number generator from current time
+
+
+Initializing worker threads...
+
+Threads started!
+
+[ 10s ] thds: 12 tps: 23.19 qps: 480.96 (r/w/o: 339.30/94.07/47.59) lat (ms,99%): 1938.16 err/s: 0.00 reconn/s: 0.00
