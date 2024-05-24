@@ -1,0 +1,32 @@
+# Configuration for database, load balancer, and metrics
+database:
+  host: 172.17.0.3
+  port: 3306
+  db_name: sysbench_maria
+  username: root
+  password: 123
+load_balancer:
+  host: 10.196.37.246
+  port: 80
+application:
+  url: http://10.196.37.246
+  endpoint: /
+testing_parameters:
+  threads: 5
+  #sysbench_duration: 60
+  ab_requests: 1000
+  ab_concurrency: 10
+metrics_output_path: /home/ubuntu/metrics
+
+# Prometheus exporter configuration
+prometheus_exporter:
+  host: 0.0.0.0
+  port: 8000
+
+metrics:
+  - sysbench_throughput
+  - sysbench_latency
+  - cpu_usage
+  - memory_usage
+
+
