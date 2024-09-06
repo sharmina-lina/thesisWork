@@ -12,7 +12,7 @@
 ~h
 # Command Line History (newest to oldest):
 :wq
-|2,0,1714435560,,"wq"
+|2,0,1717342703,,"wq"
 
 # Search String History (newest to oldest):
 
@@ -25,14 +25,24 @@
 # Registers:
 
 # File marks:
-'0  1  0  ~/.ssh/authorized_keys
-|4,48,1,0,1714435560,"~/.ssh/authorized_keys"
+'0  1  0  ~/.ssh/known_hosts
+|4,48,1,0,1717342703,"~/.ssh/known_hosts"
+'1  1  0  ~/.ssh/authorized_keys
+|4,49,1,0,1714435560,"~/.ssh/authorized_keys"
 
 # Jumplist (newest first):
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1717342703,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/authorized_keys
+|4,39,1,0,1714435560,"~/.ssh/authorized_keys"
 -'  1  0  ~/.ssh/authorized_keys
 |4,39,1,0,1714435560,"~/.ssh/authorized_keys"
 
 # History of marks within files (newest to oldest):
+
+> ~/.ssh/known_hosts
+	*	1717342702	0
+	"	1	0
 
 > ~/.ssh/authorized_keys
 	*	1714435558	0

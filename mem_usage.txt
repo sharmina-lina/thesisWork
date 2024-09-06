@@ -1,7 +1,7 @@
 sysbench 1.0.18 (using system LuaJIT 2.1.0-beta3)
 
 Running the test with following options:
-Number of threads: 8
+Number of threads: 20
 Initializing random number generator from current time
 
 
@@ -15,23 +15,23 @@ Initializing worker threads...
 
 Threads started!
 
-Total operations: 10485760 (6353032.07 per second)
+Total operations: 10485760 (3464823.13 per second)
 
-10240.00 MiB transferred (6204.13 MiB/sec)
+10240.00 MiB transferred (3383.62 MiB/sec)
 
 
 General statistics:
-    total time:                          1.6486s
+    total time:                          3.0246s
     total number of events:              10485760
 
 Latency (ms):
          min:                                    0.00
          avg:                                    0.00
-         max:                                   24.24
+         max:                                  100.01
          95th percentile:                        0.00
-         sum:                                 9433.67
+         sum:                                45128.94
 
 Threads fairness:
-    events (avg/stddev):           1310720.0000/0.00
-    execution time (avg/stddev):   1.1792/0.05
+    events (avg/stddev):           524288.0000/0.00
+    execution time (avg/stddev):   2.2564/0.33
 
