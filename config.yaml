@@ -4,7 +4,7 @@ database:
   port: 3306
   db_name: sysbench_maria
   username: root
-  password: 123
+  password: '123'
 load_balancer:
   host: 10.196.37.246
   port: 80
