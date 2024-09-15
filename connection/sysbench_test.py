@@ -80,9 +80,7 @@ def perform_sysbench_test(client, config):
 
         # Print sysbench output
         print("Sysbench test completed. Metrics are saved in 'sysbench_metrics.txt'.")
-        # Optionally, you can fetch and print the content of the metrics file
-        # stdin, stdout, stderr = client.exec_command("cat sysbench_metrics.txt")
-        # print(stdout.read().decode().strip())
+        
     except Exception as e:
         print(f"Error: {e}")
 

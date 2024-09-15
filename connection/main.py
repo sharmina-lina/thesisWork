@@ -29,10 +29,10 @@ def main():
     transfer_file_from_vm(client, 'sysbench_metrics.txt', 'sysbench_metrics.txt')
 
     # Close SSH connection
-    #client.close()
+    client.close()
 
     # Close database connection
-    #close_database_connection(connection)
+    close_database_connection(connection)
 
 if __name__ == "__main__":
     main()

@@ -4,9 +4,13 @@ import mysql.connector
 from mysql.connector import Error
 import yaml
 
+# Function to load database credential from the yaml file
+
 def load_config():
     with open("config.yaml", "r") as file:
         return yaml.safe_load(file)
+    
+# Function to establishing the connection with database from the local machine
 
 def connect_to_database(db_config):
     try:
