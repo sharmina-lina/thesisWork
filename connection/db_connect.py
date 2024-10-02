@@ -4,6 +4,9 @@ import mysql.connector
 from mysql.connector import Error
 import yaml
 
+
+
+
 # Function to load database credential from the yaml file
 
 def load_config():
@@ -15,6 +18,7 @@ def load_config():
 def connect_to_database(db_config):
     try:
         connection = mysql.connector.connect(
+         
             host=db_config['host'],
             port=db_config['port'],  # Convert port to string
             database=db_config['db_name'],

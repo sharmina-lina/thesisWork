@@ -1,11 +1,11 @@
 # Database configuration details to connect and evaluate the performance
 database:
-  host: "10.196.37.246"
+  host: "10.196.243.193"
   port: "3306"
-  db_name: "sysbench_sql"
+  db_name: "sysbench3"
   username: "root"
   password: "123"
 ssh:
-  host: "10.196.37.246"
+  host: "10.196.243.193"
   username: "ubuntu"
   key_path: "/Users/sharminalina/.ssh/id_rsa"
