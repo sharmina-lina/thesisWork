@@ -37,10 +37,10 @@ def main():
     client = ssh_connect(config, env)
     
     # Step 3: Install sysbench if not already installed
-    #install_sysbench(client)
+    install_sysbench(client)
 
     # Step 4: Prepare the database
-    #prepare_database(client, config, env)
+    prepare_database(client, config, env)
 
     # Step 5: Perform sysbench test (if needed)
     perform_sysbench_test(client, config, env)
