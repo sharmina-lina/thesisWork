@@ -1,10 +1,7 @@
 # Program for establish connection from anywhere to Database that are located in any cloud
-
 import mysql.connector
 from mysql.connector import Error
 import yaml
-
-
 
 
 # Function to load database credential from the yaml file

@@ -9,12 +9,12 @@ def load_config():
 
 
 
-def prepare_database(client, config):
-    db_name = config['database']['db_name']
-    db_user = config['database']['username']
-    db_pass = config['database']['password']
-    db_host = config['database']['host']
-    db_port = config['database']['port']
+def prepare_database(client, config,env):
+    db_name = config[env]['database']['db_name']
+    db_user = config[env]['database']['username']
+    db_pass = config[env]['database']['password']
+    db_host = config[env]['database']['host']
+    db_port = config[env]['database']['port']
 
     # Construct the sysbench prepare command
     prepare_command = (
@@ -45,13 +45,13 @@ def prepare_database(client, config):
     except Exception as e:
         print(f"Error: {e}")
 
-def perform_sysbench_test(client, config):
+def perform_sysbench_test(client, config, env):
     # Extract database and test parameters from the config
-    db_name = config['database']['db_name']
-    db_user = config['database']['username']
-    db_pass = config['database']['password']
-    db_host = config['database']['host']
-    db_port = config['database']['port']
+    db_name = config[env]['database']['db_name']
+    db_user = config[env]['database']['username']
+    db_pass = config[env]['database']['password']
+    db_host = config[env]['database']['host']
+    db_port = config[env]['database']['port']
     threads = 5  # Set the number of threads you want to use
     duration = 60  # Set the duration of the test in seconds
 
@@ -62,7 +62,7 @@ def perform_sysbench_test(client, config):
         f"--mysql-db={db_name} "
         f"--mysql-user={db_user} "
         f"--mysql-password={db_pass} "
-        f"--mysql-host=172.17.0.2 "
+        f"--mysql-host={db_host} "
         f"--mysql-port={db_port} "
         f"--tables=5 "
         f"--table-size=1000000 "
