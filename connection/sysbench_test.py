@@ -52,7 +52,7 @@ def perform_sysbench_test(client, config):
     db_pass = config['database']['password']
     db_host = config['database']['host']
     db_port = config['database']['port']
-    threads = 5  # Set the number of threads you want to use
+    threads = 10  # Set the number of threads you want to use
     duration = 60  # Set the duration of the test in seconds
 
     # Construct the sysbench command
@@ -62,7 +62,7 @@ def perform_sysbench_test(client, config):
         f"--mysql-db={db_name} "
         f"--mysql-user={db_user} "
         f"--mysql-password={db_pass} "
-        f"--mysql-host=172.17.0.2 "
+        f"--mysql-host={db_host} "
         f"--mysql-port={db_port} "
         f"--tables=5 "
         f"--table-size=1000000 "

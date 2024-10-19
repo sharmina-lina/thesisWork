@@ -1,11 +1,25 @@
-# Database configuration details to connect and evaluate the performance
-database:
-  host: "10.196.37.246"
-  port: "3306"
-  db_name: "sysbench_sql"
-  username: "root"
-  password: "123"
+# Database configuration details to connect and evaluate performance
 ssh:
-  host: "10.196.37.246"
+  host: "10.196.243.193"
   username: "ubuntu"
   key_path: "/Users/sharminalina/.ssh/id_rsa"
+database:
+  host: "10.196.243.193"
+  port: "3306"
+  db_name: "sysbench"
+  username: "root"
+  password: "123"
+
+#aws:
+ # ssh:
+  #  host: "ec2-18-184-137-221.eu-central-1.compute.amazonaws.com"
+   # username:  "ubuntu"
+    #key_path: "/Users/sharminalina/downloads/sharmina-mac.pem"
+  #database:
+   # host: "18.184.137.221"
+    #port: "3306"
+    #db_name: "sysbench"
+    #username: "root"
+    #password: "123"
+
+
