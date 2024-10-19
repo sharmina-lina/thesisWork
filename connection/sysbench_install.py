@@ -8,17 +8,17 @@ def load_config():
         return yaml.safe_load(file)
 
 # Function to establish SSH connection
-def ssh_connect(config,env):
+def ssh_connect(config):
     try:
-        ssh_key_path = config[env]['ssh']['key_path']
+        ssh_key_path = config['ssh']['key_path']
         key = paramiko.RSAKey.from_private_key_file(ssh_key_path)
         client = paramiko.SSHClient()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        client.connect(config[env]['ssh']['host'], username=config[env]['ssh']['username'], pkey=key)
-        print(f"Successfully connected to {config[env]['ssh']['host']}")
+        client.connect(config['ssh']['host'], username=config['ssh']['username'], pkey=key)
+        print(f"Successfully connected to {config['ssh']['host']}")
         return client
     except Exception as e:
-        print(f"Error: Unable to connect to {config[env]['ssh']['host']}. {e}")
+        print(f"Error: Unable to connect to {config['ssh']['host']}. {e}")
         sys.exit(1)
 
 # Function to check if sysbench is installed on remote VM
